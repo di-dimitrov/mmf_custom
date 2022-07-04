@@ -40,9 +40,10 @@ evaluation:
   - multilabel_macro_f1
 
 training:
-  batch_size: 16
+  batch_size: 32
   lr_scheduler: true
-  max_updates: 18000
+  max_updates: 1600
+  evaluation_interval: 300
   find_unused_parameters: true
   early_stop:
     criteria: propaganda/multilabel_micro_f1
