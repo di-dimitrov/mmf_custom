@@ -1,5 +1,5 @@
 includes:
-- ../../../configs/datasets/propaganda/with_features.yaml
+- configs/datasets/propaganda/with_features.yaml
 
 model_config:
   visual_bert:
@@ -40,10 +40,9 @@ evaluation:
   - multilabel_macro_f1
 
 training:
-  batch_size: 32
+  batch_size: 16
   lr_scheduler: true
-  max_updates: 900
-  evaluation_interval: 400
+  max_updates: 18000
   find_unused_parameters: true
   early_stop:
     criteria: propaganda/multilabel_micro_f1
